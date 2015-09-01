@@ -6,6 +6,7 @@ class TargetGroup < ActiveRecord::Base
 
   scope :by_country_code, -> (country_code) {
     joins(:countries)
+    .includes(:panel_provider)
     .where(countries: {country_code: country_code})
     .where(parent_id: nil)
   }
