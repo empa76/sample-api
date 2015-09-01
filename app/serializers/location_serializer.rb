@@ -1,4 +1,4 @@
 class LocationSerializer < ActiveModel::Serializer
-  attributes :name, :external_id
+  attributes :name
   self.root = false
 end
