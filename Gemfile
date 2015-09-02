@@ -14,3 +14,11 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry-byebug'
 end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'database_rewinder'
+  gem 'factory_girl_rails'
+  gem 'rspec-collection_matchers'
+end
+
