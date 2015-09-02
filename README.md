@@ -43,3 +43,29 @@
 
 Any private endpoint call without token causes `Unauthorized` error (code 401)
 
+### evaluate_target
+
+POST `http://localhost:3000/api/v1/private/evaluate_target/?token=too-many-secrets`
+
+####SAMPLE PAYLOAD
+
+```JSON
+{
+    "country_code": "uk",
+    "target_group_id": 1,
+    "locations": [
+      {
+        "id":123,
+        "panel_size": 200
+      }
+    ]
+}
+```
+
+#### SAMPLE RESPONSE
+
+```JSON
+{
+    "price": 56
+}
+```
