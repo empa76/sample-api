@@ -28,7 +28,14 @@ module Api
             @locations = params[:locations] || []
             @token = params[:token]
 
-            ActionController::Parameters.new(params).permit(:country_code, :target_group_id, :token, locations: [:id, :panel_size])
+            allowed_params = [
+              :country_code,
+              :target_group_id,
+              :token,
+              locations: [:id, :panel_size]
+            ]
+
+            ActionController::Parameters.new(params).permit(allowed_params)
           end
 
         end
