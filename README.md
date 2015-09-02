@@ -1,17 +1,19 @@
 
 # Setup
 
+1. bundle install
+
 ## Database
 
-1. For simplicity SQLite3 is used
+SQLite3 is used for simplicity
 
-2. copy database config ```cp  config/database.yml.sample config/database.yml```
+1. copy database config ```cp config/database.yml.sample config/database.yml```
 
-3. Prepare database ```rake db:create && rake db:migrate```
+2. Prepare database ```rake db:create && rake db:migrate```
 
-4. Seed data ```rake db:seed```, available country codes: `uk, de, pl`
+3. Seed data ```rake db:seed```, available country codes: `uk, de, pl`
 
-5. run rails server ```rails s```
+4. run rails server ```rails s```
 
 # API endpoints
 
@@ -43,11 +45,11 @@
 
 Any private endpoint call without token causes `Unauthorized` error (code 401)
 
-### evaluate_target
+### evaluate target
 
 POST `http://localhost:3000/api/v1/private/evaluate_target/?token=too-many-secrets`
 
-####SAMPLE PAYLOAD
+#### evaluate_target sample payload
 
 ```JSON
 {
@@ -62,7 +64,7 @@ POST `http://localhost:3000/api/v1/private/evaluate_target/?token=too-many-secre
 }
 ```
 
-#### SAMPLE RESPONSE
+#### evaluate_target sample response
 
 ```JSON
 {
