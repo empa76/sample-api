@@ -31,4 +31,3 @@
 config/database.yml
 config/secrets.yml
 vendor/bundle
-bin/*
